@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#080b18" />
+    <meta name="description" content="Neon Rush — a low-poly 3D endless runner." />
+    <title>Neon Rush — 3D Endless Runner</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-root"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Neon Rush home"><span class="brand-mark">N</span> NEON<span>RUSH</span></a>
+        <div class="top-actions">
+          <button id="sound-btn" class="icon-btn" aria-label="Toggle sound" title="Toggle sound">♫</button>
+          <button id="pause-btn" class="icon-btn" aria-label="Pause game" title="Pause">Ⅱ</button>
+        </div>
+      </header>
+
+      <section class="hud" id="hud" aria-live="polite">
+        <div class="hud-card"><span class="hud-label">SCORE</span><strong id="score">000000</strong></div>
+        <div class="hud-card"><span class="hud-label">COINS</span><strong id="coins">0</strong></div>
+        <div class="hud-card"><span class="hud-label">LEVEL</span><strong id="level">01</strong></div>
+        <div class="hud-card"><span class="hud-label">BEST</span><strong id="best">000000</strong></div>
+      </section>
+
+      <div id="overlay" class="overlay">
+        <div class="panel" id="menu-panel">
+          <div class="eyebrow"><span class="pulse"></span> ARCADE RUNNER / 001</div>
+          <h1>NEON<br><span>RUSH</span></h1>
+          <p class="lead">Run the grid. Dodge the blocks. Chase the glow.</p>
+          <div class="menu-stats">
+            <div><small>MODE</small><b>ENDLESS</b></div>
+            <div><small>WORLD</small><b>NEON CITY</b></div>
+            <div><small>BEST</small><b id="menu-best">000000</b></div>
+          </div>
+          <button id="start-btn" class="primary-btn">START RUN <span>→</span></button>
+          <p class="hint">← → or A / D to switch lanes&nbsp; · &nbsp;↑ / SPACE to jump</p>
+        </div>
+      </div>
+
+      <div id="toast" class="toast"></div>
+
+      <div class="touch-controls" id="touch-controls">
+        <button data-action="left" aria-label="Move left">←</button>
+        <button data-action="jump" aria-label="Jump">↑</button>
+        <button data-action="right" aria-label="Move right">→</button>
+      </div>
+
+      <div class="bottom-note">THREE.JS <span>•</span> LOW-POLY ARCADE</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
